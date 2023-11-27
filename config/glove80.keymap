@@ -32,7 +32,7 @@
             label = "LAYER_TAP_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo 2>, <&to 2>;
+            bindings = <&mo 2>, <&to 2>, <&to 1>;
         };
 
         magic: magic_hold_tap {
@@ -124,7 +124,7 @@
 &kp TAB       &kp SQT   &kp COMMA  &kp DOT  &kp P   &kp Y                                                   &kp F   &kp G   &kp C   &kp R     &kp L              &kp BSLH
 &kp EQUAL     &kp A     &kp O      &kp E    &kp U   &kp I                                                   &kp D   &kp H   &kp T   &kp N     &kp S              &kp MINUS
 &arkku_o_key  &kp SEMI  &kp Q      &kp J    &kp K   &kp X   &trans  &trans  &trans  &trans  &trans  &trans  &kp B   &kp M   &kp W   &kp V     &kp Z              &trans
-&trans        &trans    &trans     &trans   &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans             &trans
+&trans        &trans    &trans     &to 0    &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans             &trans
             >;
         };
 
