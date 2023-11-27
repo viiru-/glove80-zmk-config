@@ -44,22 +44,13 @@
             bindings = <&mo>, <&rgb_ug_status_macro>;
         };
 
-        arkku_o_key: arkku_o_key {
+        arkku_diacritic: arkku_diacritic {
             compatible = "zmk,behavior-mod-morph";
-            label = "ARKKU_O_KEY";
-            bindings = <&kp RA(A)>, <&kp RA(Q)>;
+            label = "ARKKU_DIACRITIC";
+            bindings = <&kp RA(Q)>, <&kp RA(P)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        arkku_a_key: arkku_a_key {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ARKKU_A_KEY";
-            bindings = <&kp RA(COMMA)>, <&kp RA(SEMICOLON)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
         };
     };
 
@@ -119,12 +110,12 @@
 
         dvorak {
             bindings = <
-&trans        &trans    &trans     &trans   &trans                                                                  &trans  &trans  &kp LBKT  &kp RIGHT_BRACKET  &trans
-&kp GRAVE     &kp N1    &kp N2     &kp N3   &kp N4  &kp N5                                                  &kp N6  &kp N7  &kp N8  &kp N9    &kp N0             &kp FSLH
-&kp TAB       &kp SQT   &kp COMMA  &kp DOT  &kp P   &kp Y                                                   &kp F   &kp G   &kp C   &kp R     &kp L              &kp BSLH
-&kp EQUAL     &kp A     &kp O      &kp E    &kp U   &kp I                                                   &kp D   &kp H   &kp T   &kp N     &kp S              &kp MINUS
-&arkku_o_key  &kp SEMI  &kp Q      &kp J    &kp K   &kp X   &trans  &trans  &trans  &trans  &trans  &trans  &kp B   &kp M   &kp W   &kp V     &kp Z              &trans
-&trans        &trans    &trans     &to 0    &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans             &trans
+&trans            &trans    &trans     &trans   &trans                                                                  &trans  &trans  &kp LBKT  &kp RIGHT_BRACKET  &trans
+&kp GRAVE         &kp N1    &kp N2     &kp N3   &kp N4  &kp N5                                                  &kp N6  &kp N7  &kp N8  &kp N9    &kp N0             &kp FSLH
+&kp TAB           &kp SQT   &kp COMMA  &kp DOT  &kp P   &kp Y                                                   &kp F   &kp G   &kp C   &kp R     &kp L              &kp BSLH
+&kp EQUAL         &kp A     &kp O      &kp E    &kp U   &kp I                                                   &kp D   &kp H   &kp T   &kp N     &kp S              &kp MINUS
+&arkku_diacritic  &kp SEMI  &kp Q      &kp J    &kp K   &kp X   &trans  &trans  &trans  &trans  &trans  &trans  &kp B   &kp M   &kp W   &kp V     &kp Z              &trans
+&trans            &trans    &trans     &to 0    &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans             &trans
             >;
         };
 
