@@ -45,7 +45,7 @@
         arkku_nubs: arkku_nubs {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&macro_ae>, <&macro_oe>;
+            bindings = <&kp RA(Q)>, <&kp RA(P)>; // AltGr+Q for ä, AltGr+P for ö
             mods = <(MOD_LSFT|MOD_RSFT)>; // Triggers the second binding when shift is held
         };
     };
@@ -84,20 +84,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 3>;
-        };
-
-        // Macro to output lowercase 'ä' on a US-International / US keyboard
-        macro_ae: macro_ae {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp RALT>, <&macro_tap &kp U>, <&macro_release &kp RALT>, <&macro_tap &kp A>;
-        };
-
-        // Macro to output lowercase 'ö' on a US-International / US keyboard
-        macro_oe: macro_oe {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp RALT>, <&macro_tap &kp U>, <&macro_release &kp RALT>, <&macro_tap &kp O>;
         };
     };
 
